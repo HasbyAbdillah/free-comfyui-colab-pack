@@ -18,3 +18,6 @@ Thumbs.db
 
 # Local promo drafts (do not commit)
 docs/promo_posts/
+
+# Personal local notebooks (do not commit)
+notebooks/_personal_misha/
