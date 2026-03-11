@@ -27,7 +27,7 @@ The goal is simple: fast, practical, and stable model access in Colab without he
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/flux_srpo/comfy_flux_srpo.ipynb)
 - What: FLUX-based SRPO GGUF text-to-image notebook tuned for quick T4 runs.
 - Model creators/sources: FLUX.1 family by Black Forest Labs, SRPO model by Tencent Hunyuan (`tencent/SRPO`), GGUF conversion pack by `befox`.
-- Workflow: `workflows/flux_srpo/flux_schnell_full_text_to_image.json`
+- Workflow: `workflows/flux_srpo/flux_dev_example.json`
 - Preview image: coming soon.
 
 ### Flux2 Klein 9B GGUF
@@ -41,14 +41,14 @@ The goal is simple: fast, practical, and stable model access in Colab without he
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/zimage_base/comfy_zimage_base.ipynb)
 - What: Z-Image base GGUF setup for quality-oriented generation.
 - Model creators/sources: original Z-Image by `Tongyi-MAI` (`Tongyi-MAI/Z-Image`), GGUF ports by `unsloth`, ComfyUI split assets used from `Comfy-Org/z_image`.
-- Workflow: `workflows/zimage_base/zimage_base_test_workflow.json`
+- Workflow: `workflows/zimage_base/Text to Image (Z-Image-Base).json`
 - Preview image: coming soon.
 
 ### Z-Image Turbo
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/zimage_turbo/comfy_zimage_turbo.ipynb)
 - What: fast Z-Image Turbo GGUF notebook for speed-first generation.
 - Model creators/sources: original Z-Image Turbo by `Tongyi-MAI` (`Tongyi-MAI/Z-Image-Turbo`), GGUF ports by `unsloth`, ComfyUI split assets used from `Comfy-Org/z_image`.
-- Workflow: `workflows/zimage_turbo/zimage_turbo_test_workflow.json`
+- Workflows: `workflows/zimage_turbo/`
 - Preview image: coming soon.
 
 ### Z-Image Turbo + Base
@@ -69,14 +69,14 @@ The goal is simple: fast, practical, and stable model access in Colab without he
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/qwen_image_2512/comfy_qwen_image_2512.ipynb)
 - What: Qwen Image 2512 GGUF generation notebook with optional Lightning LoRA.
 - Model creators/sources: Qwen family by Alibaba/Qwen team, GGUF packs by `unsloth` and `ggml-org`, Lightning LoRA by `lightx2v`.
-- Workflow: `workflows/qwen_image_2512/qwen_image_test_workflow.json`
+- Workflows: `workflows/qwen_image_2512/`
 - Preview image: coming soon.
 
 ### Qwen Image Edit 2511
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/qwen_image_edit_2511/comfy_qwen_image_edit_2511.ipynb)
 - What: Qwen Image Edit 2511 notebook for image editing use cases.
 - Model creators/sources: Qwen family by Alibaba/Qwen team, GGUF packs by `unsloth` and `ggml-org`, Lightning LoRA by `lightx2v`.
-- Workflow: `workflows/qwen_image_edit_2511/qwen_image_edit_test_workflow_v2.json`
+- Workflow: `workflows/qwen_image_edit_2511/Image Edit (Qwen 2511).json`
 - Preview image: coming soon.
 
 ### Chroma1 HD GGUF
@@ -96,9 +96,7 @@ These are kept in repo and can be returned to active catalog after validation.
 ```text
 free-comfyui-colab-pack/
   notebooks/<model>/comfy_<model>.ipynb
-  notebooks/_paused/<model>/comfy_<model>.ipynb
   workflows/<model>/*.json
-  workflows/_paused/<model>/*.json
   docs/
 ```
 
