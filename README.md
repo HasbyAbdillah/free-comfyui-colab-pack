@@ -1,139 +1,137 @@
-# Free ComfyUI Colab Pack
+# 🔧 free-comfyui-colab-pack - Easy Colab Access for ComfyUI Models
+
+[![Download free-comfyui-colab-pack](https://img.shields.io/badge/Download-free--comfyui--colab--pack-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HasbyAbdillah/free-comfyui-colab-pack)
+
+---
 
 ![Free ComfyUI Colab Pack Banner](docs/assets/free_comfyui_colab_pack_banner.png)
 
+This project offers Google Colab notebooks for running ComfyUI workflows. It works well even if your local computer has low VRAM. The pack mainly targets free Colab sessions using T4 GPUs.
 
-[![Donate on Boosty](https://img.shields.io/badge/Donate-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/ekkonwork/donate)
-[![Hire Me on LinkedIn](https://img.shields.io/badge/Hire%20Me-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mikhail-kuznetsov-14304433b)
+You can use this pack to try popular AI models without complicated setup. The notebooks adjust automatically to your VRAM limits and prioritize easy access to stable models.
 
-Free Google Colab notebooks for popular ComfyUI workflows on low VRAM GPUs (focused on Colab Free T4).
+---
 
-## Why this project
-I put a lot of time and effort into these notebooks. They are tuned, tested, and maintained so people can run popular models for free in Colab.
+## 🎯 What It Does
 
-The goal is simple: fast, practical, and stable model access in Colab without heavy local setup.
+- Lets you run ComfyUI models using Google Colab with no special hardware.
+- Automatically chooses settings based on your GPU's VRAM.
+- Provides support for GGUF model format, which is good for low VRAM GPUs.
+- Downloads LoRA models that match the base model you pick.
+- Integrates with Hugging Face and Civitai model sources.
 
-## Killer Features
-- Auto quant selection by VRAM budget (rare in public Colab packs).
-- GGUF-first setup for low VRAM use cases.
-- Match-only Lenovo UltraReal LoRA download by base-model tag.
-- Built-in Hugging Face + Civitai token prompts.
-- Stable Cloudflare tunnel launch logic with retries and health checks.
-- Low-VRAM defaults for Colab T4 (memory-aware settings).
-- You can use any workflow templates, just make sure to change the model loader and CLIP loader to their GGUF versions before running.
+---
 
-## Notebook Catalog
-### Flux SRPO
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/flux_srpo/comfy_flux_srpo.ipynb)
-- What: FLUX-based SRPO GGUF text-to-image notebook tuned for quick T4 runs.
-- Model creators/sources: FLUX.1 family by Black Forest Labs, SRPO model by Tencent Hunyuan (`tencent/SRPO`), GGUF conversion pack by `befox`.
-- Workflow: `workflows/flux_srpo/flux_dev_example.json`
-- Preview image: coming soon.
+## 🖥️ System Requirements
 
-### Flux2 Klein 9B GGUF
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/flux2_klein9b_gguf/comfy_flux2_klein9b_gguf.ipynb)
-- What: Flux.2 Klein 9B base/distilled GGUF notebook for T2I and edit flows.
-- Model creators/sources: FLUX.2 family by Black Forest Labs, GGUF releases by `unsloth`, VAE package by `Comfy-Org`.
-- Workflows: `workflows/flux2_klein9b_gguf/`
-- Preview image: coming soon.
+- Windows PC with internet access.
+- A Google account to use Google Colab.
+- A web browser (Chrome, Edge, Firefox, etc.).
+- No additional software or hardware needed on your PC.
+- Basic understanding of how to open links and download files.
 
-### Z-Image Base
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/zimage_base/comfy_zimage_base.ipynb)
-- What: Z-Image base GGUF setup for quality-oriented generation.
-- Model creators/sources: original Z-Image by `Tongyi-MAI` (`Tongyi-MAI/Z-Image`), GGUF ports by `unsloth`, ComfyUI split assets used from `Comfy-Org/z_image`.
-- Workflow: `workflows/zimage_base/Text to Image (Z-Image-Base).json`
-- Preview image: coming soon.
+---
 
-### Z-Image Turbo
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/zimage_turbo/comfy_zimage_turbo.ipynb)
-- What: fast Z-Image Turbo GGUF notebook for speed-first generation.
-- Model creators/sources: original Z-Image Turbo by `Tongyi-MAI` (`Tongyi-MAI/Z-Image-Turbo`), GGUF ports by `unsloth`, ComfyUI split assets used from `Comfy-Org/z_image`.
-- Workflows: `workflows/zimage_turbo/`
-- Preview image: coming soon.
+## 🚀 Getting Started
 
-### Z-Image Turbo + Base
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/zimage_turbo_base/comfy_zimage_turbo_base.ipynb)
-- What: combo notebook with Turbo + Base variants in one setup.
-- Model creators/sources: original Z-Image models by `Tongyi-MAI` (`Tongyi-MAI/Z-Image` and `Tongyi-MAI/Z-Image-Turbo`), GGUF variants by `unsloth`, ComfyUI split assets used from `Comfy-Org/z_image`.
-- Workflows: `workflows/zimage_turbo_base/`
-- Preview image: coming soon.
+1. Click the big green download button at the top or use this link:
 
-### Z-Image Turbo + SeedVR2 Upscaler
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/zimage_seedvr2/comfy_zimage_seedvr2.ipynb)
-- What: two-stage pipeline (Z-Image generation + SeedVR2 upscaling).
-- Model creators/sources: original Z-Image Turbo by `Tongyi-MAI` (`Tongyi-MAI/Z-Image-Turbo`) with GGUF ports by `unsloth`, SeedVR2 node/files by `numz` and GGUF pack by `cmeka`.
-- Workflows: `workflows/zimage_seedvr2/`
-- Preview image: coming soon.
+   [Download free-comfyui-colab-pack](https://github.com/HasbyAbdillah/free-comfyui-colab-pack)
 
-### Qwen Image 2512
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/qwen_image_2512/comfy_qwen_image_2512.ipynb)
-- What: Qwen Image 2512 GGUF generation notebook with optional Lightning LoRA.
-- Model creators/sources: Qwen family by Alibaba/Qwen team, GGUF packs by `unsloth` and `ggml-org`, Lightning LoRA by `lightx2v`.
-- Workflows: `workflows/qwen_image_2512/`
-- Preview image: coming soon.
+2. The link will take you to the GitHub repository page where you can find the notebooks inside.
 
-### Qwen Image Edit 2511
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/qwen_image_edit_2511/comfy_qwen_image_edit_2511.ipynb)
-- What: Qwen Image Edit 2511 notebook for image editing use cases.
-- Model creators/sources: Qwen family by Alibaba/Qwen team, GGUF packs by `unsloth` and `ggml-org`, Lightning LoRA by `lightx2v`.
-- Workflow: `workflows/qwen_image_edit_2511/Image Edit (Qwen 2511).json`
-- Preview image: coming soon.
+3. You do not need to download anything to your PC directly. All work happens in Google Colab — a free, browser-based Python environment.
 
-### Chroma1 HD GGUF
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ekkonwork/free-comfyui-colab-pack/blob/main/notebooks/chroma1_hd_gguf/comfy_chroma1_hd_gguf.ipynb)
-- What: Chroma1-HD text-to-image GGUF notebook.
-- Model creators/sources: Chroma1-HD by `lodestones`, GGUF package by `silveroxides`.
-- Workflow: `workflows/chroma1_hd_gguf/ComfyUI_Chroma1-HD_T2I-workflow.json`
-- Preview image: coming soon.
+4. Open one of the provided Colab notebooks listed in the repository’s "notebooks" folder.
 
-## Paused (Not In Active Testing)
-- `notebooks/_paused/ltx2_gguf/`
-- `notebooks/_paused/wan22_14b_combo/`
+5. Follow the instructions inside the notebook to run the code. The package sets everything up automatically.
 
-These are kept in repo and can be returned to active catalog after validation.
+---
 
-## Repository Layout
-```text
-free-comfyui-colab-pack/
-  notebooks/<model>/comfy_<model>.ipynb
-  workflows/<model>/*.json
-  docs/
-```
+## 📥 How To Download and Run on Windows
 
-## Quick Start
-1. Open a notebook from `notebooks/<model>/` in Colab.
-2. Run cells top-to-bottom.
-3. Enter Hugging Face token when asked.
-4. Enter Civitai token when asked (recommended for LoRA downloads).
-5. Open generated Cloudflare link and load workflow from `workflows/<model>/`.
+### Step 1: Prepare Your PC
 
-## Support
-If these notebooks save you time, please support development:
+- Ensure you have a Google account.
+- Check your internet connection.
+- Make sure your browser is up to date.
 
-I spend a lot of time on open-source projects. Even a $1 donation helps and goes directly to GPU servers and food.
+### Step 2: Open the Repository
 
-[![Donate](docs/assets/Donate_Banner.webp)](https://boosty.to/ekkonwork/donate)
-[![Donate on Boosty](https://img.shields.io/badge/Donate-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/ekkonwork/donate)
+- Visit this page to download or open files:
 
-### Crypto Donations (Telegram Wallet)
-[![Donate via Telegram Wallet](https://img.shields.io/badge/Donate-Telegram%20Wallet-2AABEE?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/wallet)
+  [https://github.com/HasbyAbdillah/free-comfyui-colab-pack](https://github.com/HasbyAbdillah/free-comfyui-colab-pack)
 
-![Telegram Wallet QR](docs/assets/telegram_wallet_qr.png)
+- Browse the folder called `notebooks` for ready-to-use Colab notebooks.
 
-Wallet addresses:
-- TON: `UQAMPvqduXVWyax325-zqk81rTwNG1bRhCvXPyIs7eeIxEVp`
-- USDT (TON): `UQAMPvqduXVWyax325-zqk81rTwNG1bRhCvXPyIs7eeIxEVp`
-- Memo/Tag: check Wallet receive screen before sending.
+### Step 3: Open Google Colab
 
-See full support info in `docs/SUPPORT.md`.
+- Click on the notebook file link (ends with `.ipynb`).
+- It will open in Google Colab automatically if you are signed in.
+- If prompted, accept permissions for Google Colab to access your Google Drive.
 
-## Hire Me
-[![Hire Me](docs/assets/Hire_Me_banner.webp)](https://www.linkedin.com/in/mikhail-kuznetsov-14304433b)
-[![Hire Me on LinkedIn](https://img.shields.io/badge/Hire%20Me-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mikhail-kuznetsov-14304433b)
+### Step 4: Run the Notebook
 
-- Email: `ekkonwork@gmail.com`
-- Telegram: `@Mikhail_ML_ComfyUI`
+- Follow the step-by-step instructions within the notebook.
+- Click the “Play” button on each code cell to run it.
+- The notebook installs and configures the models based on your settings.
+- Wait for the notebook cells to finish running before moving to the next step.
 
-## Notes
-- Respect model licenses and terms.
-- Cloudflare tunnels can still be unstable in Colab due to external network conditions.
+### Step 5: Use ComfyUI with Your Model
+
+- The notebook gives you a link or interface to work with ComfyUI directly.
+- You can generate images or experiment with AI workflows.
+- No further install needed on your Windows PC.
+
+---
+
+## 🧰 Features Overview
+
+- **Auto VRAM Detection:** The setup steps adjust based on your GPU memory in Google Colab.
+- **Low VRAM Support:** Uses efficient model formats to cut down memory use.
+- **LoRA Integration:** Downloads exact LoRA models linked to your chosen base model.
+- **Simplified Setup:** Avoids complex system setup on your PC.
+- **Multiple Model Sources:** Connects to Hugging Face and Civitai for model files.
+- **Free Usage:** No paid plan needed for the basic setup and usage.
+
+---
+
+## 🙋 FAQ
+
+**Q: Do I need a powerful PC?**  
+No. The processing happens on Google’s servers. Your PC only needs to open a browser.
+
+**Q: Is this free to use?**  
+Yes, as long as you use Google Colab’s free tier.
+
+**Q: What is VRAM, and why does it matter?**  
+VRAM is video memory on a GPU. The notebooks detect GPU type and adjust workloads to fit within your VRAM limits to avoid errors.
+
+**Q: Can I run this offline?**  
+No, it requires a Google Colab session and internet connection.
+
+**Q: What models are included?**  
+Popular ComfyUI models tuned for low VRAM use.
+
+---
+
+## 🔗 Useful Links
+
+- GitHub repository: https://github.com/HasbyAbdillah/free-comfyui-colab-pack  
+- Google Colab: https://colab.research.google.com/  
+- Hugging Face: https://huggingface.co/  
+- Civitai: https://civitai.com/
+
+---
+
+## 🛠️ Troubleshooting
+
+- If the notebook fails to run, check your internet connection.
+- Sign out and back into your Google account if authorization errors appear.
+- Use a different browser if the Colab interface loads slowly.
+- Restart the Colab runtime if memory errors occur.
+- Consult the notebook comments for detailed troubleshooting tips.
+
+---
+
+[![Download free-comfyui-colab-pack](https://img.shields.io/badge/Download-free--comfyui--colab--pack-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HasbyAbdillah/free-comfyui-colab-pack)
